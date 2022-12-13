@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    </head>
+    {% include head.html %}
+<body>
+    {% include sidebar.html %}
+
+    <div class="wrap">
+        <div class="masthead">
+          <div class="container">
+            <h3 class="masthead-title">
+              <a href="{{ site.baseurl }}/" title="Home">Home</a>
+              <!-- <small>{{ site.tagline }}</small> -->
+            </h3>
+          </div>
+        </div>
+        <div class="container content">
+            <h1 style="font-weight: bolder;">{{page.title}}: {{page.name}}</h1>
+            {{page.description}}
+            <hr>
+                <div style="overflow: auto;">
+                    <table class="course-details">
+                        <tr>
+                            <td><b>Instructor :</b></td>
+                            <td>{{page.instructor}}</td>
+                        </tr>
+                        <tr>
+                            <td><b>E-mail:</b></td>
+                            <td>{{page.email}}</td>
+                        </tr>
+                        <tr>
+                            <td><b>Department :</b></td>
+                            <td>{{page.department}}</td>
+                        </tr>
+                        <tr>
+                            <td><b>Semester Type :</b></td>
+                            <td>{{page.semestertype}}</td>
+                        </tr>
+                        <tr>
+                            <td><b>L-T-P-C :</b></td>
+                            <td>{{page.lectures}}-{{page.tutorials}}-{{page.praticals}}-{{page.credits}}</td>
+                        </tr>
+                        <tr>
+                            <td><b>Level :</b></td>
+                            <td>{{page.level}}</td>
+                        </tr>
+                        <tr>
+                            <td><b>Type :</b></td>
+                            <td>{{page.type}}</td>
+                        </tr>
+                        <tr>
+                            <td><b>Pre-requisites :</b></td>
+                            <td>{% if page.prerequisites == null %}None{% else %}<a href="{{page.prerequisites | relative_url}}" style="text-decoration:none;">{{page.prerequisites}}{% endif %}</a></td>
+                        </tr>
+                    </table>
+                </div>
+                <hr>
+                <h3>Syllabus</h3>
+                {% if page.syllabus == null %}
+                    Not Updated Yet.
+                {% else %}
+                    {{page.syllabus}}
+                {% endif %}
+                <hr>
+                <h3>References</h3>
+                {% if page.references == null %}
+                    Not Updated Yet.
+                {% else %}
+                    {% for reference in page.references %}
+                        <li>{{ reference }}</li>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+  <script src='{{ site.baseurl }}/public/js/script.js'></script>
+</body>
+</html>

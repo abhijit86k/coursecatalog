@@ -1,0 +1,117 @@
+---
+---
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Home Page */
+
+.home-title{
+    font-weight: bolder;
+}
+.home-list{
+    padding: 10px 20px;
+}
+.home-list a {
+    text-decoration:none;
+}
+.list-link {
+    font-size: 26px;
+}
+
+/* New Home Page */
+
+
+.fa-solid{
+    color:#0dcaf0;
+}
+.coursecard{
+    transition: box-shadow .3s;
+    margin: 2rem 0px;
+    padding: 1.25rem;
+    border: 1.5px solid rgb(0, 0, 0);
+    border-radius: 1.25rem;
+}
+.coursecard:hover {
+    box-shadow: 0 0 11px #0dcaf0; 
+}
+.dept{
+    background-color: #0dcaf0;
+    text-align: center;
+    padding: 5px 18px;
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    border-radius: 10px;
+    margin: 10px;
+}
+.inst {
+    padding: 5px 18px 5px 0px;
+    font-size: 16px;
+    font-weight: 600;
+}
+.coursedetail{
+    margin: 10px;
+    font-weight: 700;
+}
+.desc{
+    margin: 10px;
+    color: rgb(102, 100, 100);
+}
+.knowmore{
+    margin: 10px;
+    color: white;
+}
+.row {
+    margin: 0px;
+}
+.col-md-2 {
+    width: 175px;
+}
+
+
+/* Search Page */
+
+.searchbar {
+    text-align: center;
+}
+.search-here {
+    font-weight: bolder;
+    font-size:50px;
+    margin-bottom: 20px;
+}
+.sbar {
+    width: 50%;
+    height: 45px;
+    padding: 10px;
+    border-radius: 12px;
+    font-size: 20px;
+}
+.reslist {
+    list-style: none;
+}
+.reslist li {
+    margin: 20px 0px;
+    border: 1px solid black;
+    border-radius: 6px;
+    padding: 10px 10px 20px 10px;
+}
+.result-link{
+    font-size: 28px;
+}
+
+/* Course Details Page */
+
+.course-details td{
+    padding: 6px 16px;
+}
+
+
+
+@media (max-width: 38em) {
+    .result-link{
+        font-size: 20px;
+    }
+  }
+  
