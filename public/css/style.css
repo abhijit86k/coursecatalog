@@ -7,6 +7,12 @@
 
 /* Home Page */
 
+.page-heading{
+    font-weight: bolder;
+    text-align: center;
+    /* margin-bottom: 20px; */
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 .home-title{
     font-weight: bolder;
 }
@@ -44,7 +50,7 @@
     font-weight: 500;
     font-size: 14px;
     border-radius: 10px;
-    margin: 10px;
+    margin: 10px 0px 10px 10px;
 }
 .inst {
     padding: 5px 18px 5px 0px;
@@ -108,10 +114,53 @@
 }
 
 
+/* Dropdown Button */
+.dropbtn {
+    color: white;
+    border: 1px solid black;
+    margin: 10px;
+}
+.dropdown-curr {
+    background-color: rgb(208, 208, 208);
+}
+.dropdownw{
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    border-radius: 10px;
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    /* min-width: 160px; */
+    width: 300px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+  
+.dropdownw a:hover {background-color: #ddd;}
+  
+.show {display: block;}
+
 
 @media (max-width: 38em) {
     .result-link{
         font-size: 20px;
+    }
+    .coursecard{
+        padding: 0.8rem;
+    }
+    .dropdown-content {
+        width: 200px;
     }
   }
   
