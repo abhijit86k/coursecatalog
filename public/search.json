@@ -6,7 +6,7 @@
 
       "name"    : "{{ post.name | escape }}",
       "title"    : "{{ post.title | escape }}",
-      "url"      : "{{ site.baseurl }}{{ post.url }}",
+      "url"      : "{{ post.url }}",
       "inst"   : "{{ post.instructor }}",
       "department"     : "{{ post.department }}",
       "description"     : "{{ post.description }}",

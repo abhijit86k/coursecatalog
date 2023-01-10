@@ -20,7 +20,7 @@
           {% endif %}
         </title>
       
-        {% if page.url and site.baseurl %}
+        {% if page.url %}
         <link rel="canonical" href="{{ page.url }}">
         {% endif %}
       
@@ -33,7 +33,7 @@
         <!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ '/public/apple-touch-icon-precomposed.png' | absolute_url }}"> -->
         <!-- <link rel="shortcut icon" href="{{ '/public/favicon.ico' | absolute_url }}"> -->
       
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ '/atom.xml' | absolute_url }}">
+        <!-- <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ '/atom.xml' | absolute_url }}"> -->
       
         {% if site.google_analytics_id %}
         <script>
@@ -54,7 +54,7 @@
         <div class="masthead">
           <div class="container">
             <h3 class="masthead-title">
-              <a href="{{ site.baseurl }}/" title="Home">Home</a>
+              <a href="/" title="Home">Home</a>
               <!-- <small>{{ site.tagline }}</small> -->
             </h3>
           </div>
@@ -132,6 +132,6 @@
     
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>
 
-  <script src='{{ site.baseurl }}/public/js/script.js'></script>
+  <script src='/public/js/script.js'></script>
 </body>
 </html>
