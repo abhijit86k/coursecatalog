@@ -20,7 +20,7 @@
           {% endif %}
         </title>
       
-        {% if page.url %}
+        {% if page.url and site.baseurl %}
         <link rel="canonical" href="{{ page.url }}">
         {% endif %}
       
@@ -54,7 +54,7 @@
         <div class="masthead">
           <div class="container">
             <h3 class="masthead-title">
-              <a href="/" title="Home">Home</a>
+              <a href="{{ site.baseurl }}" title="Home">Home</a>
               <!-- <small>{{ site.tagline }}</small> -->
             </h3>
           </div>
@@ -132,6 +132,6 @@
     
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>
 
-  <script src='/public/js/script.js'></script>
+  <script src='{{ site.baseurl }}/public/js/script.js'></script>
 </body>
 </html>
